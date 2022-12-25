@@ -7,10 +7,9 @@ echo 'telah selesai update';
 sleep 4;
 echo "install nginx";
 
-if [-d  "/etc/nginx/nginx.conf"]
+if [ -d  /etc/nginx/nginx.conf ]
 then
     echo 'nginx sudah ada!!'
-    sleep 2;
     exit;
 else
     sudo apt install nginx -y;
