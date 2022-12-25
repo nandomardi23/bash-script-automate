@@ -7,7 +7,7 @@ echo 'telah selesai update';
 sleep 4;
 echo "install nginx";
 
-if [-d  "/etc/nginx/"]
+if [-d  "/etc/nginx/nginx.conf"]
 then
     echo 'nginx sudah ada!!'
     sleep 2;
