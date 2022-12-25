@@ -11,6 +11,7 @@ if [-d  "/etc/nginx/"]
 then
     echo 'nginx sudah ada!!'
     sleep 2;
+    exit;
 else
     sudo apt install nginx -y;
     systemctl enable nginx ;
