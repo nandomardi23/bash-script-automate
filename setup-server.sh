@@ -16,5 +16,8 @@ else
     systemctl enable nginx ;
     systemctl status nginx;
     echo "nginx sudah di install";
-    sleep 5;
 fi
+    sleep 3;
+
+echo "install maria db";
+if
