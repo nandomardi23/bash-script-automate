@@ -23,4 +23,5 @@ echo "download docker key suceess";
 
   sudo groupadd docker;
   sudo usermod -aG docker $USER;
-  newgrp docker
+  newgrp docker;
+  docker run hello-world;
