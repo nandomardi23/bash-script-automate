@@ -10,7 +10,7 @@ sudo apt-get install
 echo "instalation depend success";
 
 sudo mkdir -p /etc/apt/keyrings;
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg;
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg -y;
 
 echo "download docker key suceess";
 
@@ -23,5 +23,5 @@ echo "download docker key suceess";
 
   sudo groupadd docker;
   sudo usermod -aG docker $USER;
-  newgrp docker;
+  sudo newgrp docker;
   docker run hello-world;
