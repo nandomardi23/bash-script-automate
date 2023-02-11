@@ -19,9 +19,11 @@ echo "download docker key suceess";
 
   sudo apt-get update;
 
-  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y ;
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
   sudo groupadd docker;
   sudo usermod -aG docker $USER;
+  echo "user mod udah";
   sudo newgrp docker;
+  echo "membuat new group success"
   docker run hello-world;
