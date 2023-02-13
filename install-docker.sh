@@ -12,7 +12,7 @@ echo "membuat folder keyrings";
 sudo mkdir -m 0755 -p /etc/apt/keyrings;
 
 echo "mendownload docker.gpg";
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg -y;
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg;
 
 echo "pindahkan docker.gpg ke ect/apt/sources.list.d";
 echo \
@@ -23,7 +23,7 @@ echo "sesuau yang dibutuhkan";
 sudo chmod a+r /etc/apt/keyrings/docker.gpg;
 sudo apt-get update;
 echo "download installan";
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin;
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y;
 
 echo "buat dockernya bisa diakses tanpa sudo";
 sudo usermod -aG docker $USER;
